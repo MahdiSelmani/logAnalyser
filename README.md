@@ -1,42 +1,43 @@
-Log Analyser
-Prerequisites
+LOG ANALYSER
+
+PREREQUISITES
 Before you begin, make sure you have the following installed on your system:
 
-Java Development Kit (JDK) 8 or later
-Scala Build Tool (SBT)
-Apache Kafka
-Apache Spark
+Java Development Kit (JDK) 8 or later\n
+Scala Build Tool (SBT)\n
+Apache Kafka\n
+Apache Spark\n
 
-Setup
-Clone the project repository:
-git clone https://github.com/MahdiSelmani/logAnalyser.git
+SETUP
+Clone the project repository:\n
+git clone https://github.com/MahdiSelmani/logAnalyser.git\n
 
-Before running the Log analyser project, make sure the kafka and zookeeper are running. Set up the url to localhost:9092, the topic to 'log'.
-Navigate to the project directory:
-cd logAnalyser
+Before running the Log analyser project, make sure the kafka and zookeeper are running. Set up the url to localhost:9092, the topic to 'log'.\n
+Navigate to the project directory:\n
+cd logAnalyser\n
 
-Run SBT:
-sbt
+Run SBT:\n
+sbt\n
 
-Running the Consumer
-Switch to the consumer project:
-project consumer
+RUNNING THE CONSUMER
+Switch to the consumer project:\n
+project consumer\n
 
-Compile the project:
-compile
+Compile the project:\n
+compile\n
 
-Run the Consumer module :
-run
+Run the Consumer module :\n
+run\n
 
-Or you can build a jar file, to be used with the spark-submit command:
-package
+Or you can build a jar file, to be used with the spark-submit command:\n
+package\n
 
-Same thing for the producer:
-Switch to the producer project:
-project producer
+SAME THING FOR THE PRODUCER
+Switch to the producer project:\n
+project producer\n
 
-Compile the project:
-producer
+Compile the project:\n
+producer\n
 
-Run the producer module :
-run
+Run the producer module :\n
+run\n
