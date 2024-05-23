@@ -1,0 +1,72 @@
+    Terminal 1 -- Zookeeper
+cd kafka/ && bin/zookeeper-server-start.sh config/zookeeper.properties
+
+
+    Terminal 2 -- Kafka Broker
+cd kafka/ && bin/kafka-server-start.sh config/server.properties
+
+
+    Terminal 3 -- Kafka Config
+cd kafka && bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic log
+
+
+    Terminal 4 -- Hive Metastore
+start-dfs.sh // to run hdfs 
+hive --service metastore
+
+
+    Terminal 5 -- Hive
+~$ hive
+ ...
+hive> use default;
+hive> select count(*) from tweets;
+
+
+    Terminal 6 -- Stream Producer
+scala -classpath /home/mahdi/logMonitor/producer.jar:/home/mahdi/kafka/libs/* Producer /home/mahdi/logMonitor/logFile.log
+scala -classpath /home/mahdi/logMonitor/producer.jar:/home/mahdi/kafka/libs/* Producer /home/mahdi/logMonitor/logFile2.log
+
+
+
+
+    Terminal 7 -- Stream Consumer + Spark Transformer
+spark-submit --packages org.apache.spark:spark-streaming_2.12:3.5.1,org.apache.kafka:kafka-clients:2.8.0 --class Consumer /home/mahdi/logMonitor/consumer.jar
+
+spark-submit --packages org.apache.spark:spark-streaming_2.12:3.5.1,org.apache.kafka:kafka-clients:2.8.0,mysql:mysql-connector-java:8.0.28 --class Consumer /home/mahdi/logMonitor/test/consumer.jar
+
+
+
+*****************************************NOTE************************************************
+to compile a scala script : scalac -classpath "/home/mahdi/kafka/libs/*" /home/mahdi/logMonitor/consumer.scala
+to build a jar file : jar -cf consumer.jar *.class
+
+
+spark-submit --packages org.apache.spark:spark-streaming_2.12:3.5.1,org.apache.kafka:kafka-clients:2.8.0,mysql:mysql-connector-java:8.0.28 --class Consumer /home/mahdi/logMonitor/test/consumer.jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+github : 
+
+spark-submit --packages org.apache.spark:spark-streaming_2.12:3.5.1,org.apache.kafka:kafka-clients:2.8.0,mysql:mysql-connector-java:8.0.28 --class Consumer /home/mahdi/Desktop/github/consumer.jar
+
+
+
+
+
+
+
