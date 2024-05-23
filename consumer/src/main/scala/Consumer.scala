@@ -78,7 +78,8 @@ object Consumer {
   def batchProcessLogs(logDetails: Array[(String, String, String, Boolean, Boolean, Boolean)]): Unit = {
     val url = "jdbc:mysql://localhost:3306/log"
     val username = "root"
-    val password = "The13001987-"
+    //password is hidden for security reasons
+    val password = "*********"
     var connection: Connection = null
 
     try {
