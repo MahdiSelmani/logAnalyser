@@ -1,44 +1,83 @@
-##LOG ANALYSIS IN REAL TIME\n
-#Project built using Apache spark, Kafka, Scala PL\n
+LOG ANALYSIS IN REAL TIME
+===========================
+Project built using Apache Spark, Kafka, Scala Programming Language
 
-#PREREQUISITES\n
-Before you begin, make sure you have the following installed on your system:\n
+PREREQUISITES
+===========================
+Before you begin, make sure you have the following installed on your system:
 
-Java Development Kit (JDK) 8 or later\n
-Scala Build Tool (SBT)\n
-Apache Kafka\n
-Apache Spark\n
+Java Development Kit (JDK) 8 or later
+Scala Build Tool (SBT)
+Apache Kafka
+Apache Spark
+SETUP
 
-SETUP\n
-#Clone the project repository:\n
-git clone https://github.com/MahdiSelmani/logAnalyser.git\n
+Clone the project repository:
 
-#Before running the Log analyser project, make sure the kafka and zookeeper are running. Set up the url to localhost:9092, the topic to 'log'.\n
-Navigate to the project directory: \n
->cd logAnalyser \n
+```
+git clone https://github.com/MahdiSelmani/logAnalyser.git
+```
 
-#Run SBT:\n
->sbt\n
+Before running the Log Analyzer project, make sure Kafka and Zookeeper are running. Set up the URL to localhost:9092 and the topic to 'log'. Navigate to the project directory:
+```
+cd logAnalyser
+```
+Running the project : 
+===========================
 
-#RUNNING THE CONSUMER\n
-1-Switch to the consumer project:\n
-sbt>project consumer\n
+Run SBT:
+```
+sbt
+```
 
-2-Compile the project:\n
-sbt>compile\n
+RUNNING THE CONSUMER
 
-3-Run the Consumer module :\n
-sbt>run\n
+Switch to the consumer project:
 
-Or you can build a jar file, to be used with the spark-submit command:\n
-sbt>package\n
+```
+project consumer
 
-SAME THING FOR THE PRODUCER\n
-1-Switch to the producer project:\n
-sbt>project producer\n
+```
+Compile the project:
 
-2-Compile the project:\n
-sbt>producer\n
+```
+compile
 
-3-Run the producer module :\n
-sbt>run\n
+```
+
+Run the Consumer module:
+
+```
+run
+
+```
+
+Alternatively, you can build a JAR file to be used with the spark-submit command:
+
+```
+package
+
+```
+
+SAME THING FOR THE PRODUCER
+
+Switch to the producer project:
+
+```
+project producer
+
+```
+
+Compile the project:
+
+```
+compile
+
+```
+
+Run the producer module:
+
+```
+run
+
+```
