@@ -14,8 +14,8 @@ SETUP\n
 git clone https://github.com/MahdiSelmani/logAnalyser.git\n
 
 #Before running the Log analyser project, make sure the kafka and zookeeper are running. Set up the url to localhost:9092, the topic to 'log'.\n
-Navigate to the project directory:\n
->cd logAnalyser\n
+Navigate to the project directory: \n
+>cd logAnalyser \n
 
 #Run SBT:\n
 >sbt\n
