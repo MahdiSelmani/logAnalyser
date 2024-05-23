@@ -43,27 +43,23 @@ Switch to the consumer project:
 
 ```
 project consumer
-
 ```
 Compile the project:
 
 ```
 compile
-
 ```
 
 Run the Consumer module:
 
 ```
 run
-
 ```
 
 Alternatively, you can build a JAR file to be used with the spark-submit command:
 
 ```
 package
-
 ```
 
 SAME THING FOR THE PRODUCER
@@ -72,19 +68,16 @@ Switch to the producer project:
 
 ```
 project producer
-
 ```
 
 Compile the project:
 
 ```
 compile
-
 ```
 
 Run the producer module:
 
 ```
 run
-
 ```
