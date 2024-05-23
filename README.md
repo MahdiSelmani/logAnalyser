@@ -17,6 +17,8 @@ Apache Kafka
 
 Apache Spark
 
+MySQL Database
+
 SETUP
 
 Clone the project repository:
@@ -25,7 +27,12 @@ Clone the project repository:
 git clone https://github.com/MahdiSelmani/logAnalyser.git
 ```
 
-Before running the Log Analyzer project, make sure Kafka and Zookeeper are running. Set up the URL to localhost:9092 and the topic to 'log'. Navigate to the project directory:
+Before running the Log Analyzer project, make sure Kafka and Zookeeper are running. Set up the URL to localhost:9092 and the topic to 'log'. 
+
+Make sure the MySQL is running, with a database named 'log', and the appropriate tables.
+
+
+Navigate to the project directory:
 ```
 cd logAnalyser
 ```
