@@ -2,14 +2,21 @@ LOG ANALYSIS IN REAL TIME
 ===========================
 Project built using Apache Spark, Kafka, Scala Programming Language
 
+Real-time data processing tool using Apache Spark, Kafka, and Scala to analyze log streams efficiently. It comprises consumer and producer components for streaming and analyzing log data, offering scalability and robust event detection capabilities. Ideal for system monitoring and security analytics.
+
+
 PREREQUISITES
 ===========================
 Before you begin, make sure you have the following installed on your system:
 
 Java Development Kit (JDK) 8 or later
+
 Scala Build Tool (SBT)
+
 Apache Kafka
+
 Apache Spark
+
 SETUP
 
 Clone the project repository:
